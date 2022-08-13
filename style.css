@@ -61,9 +61,24 @@ li:hover {
     transition: 5ms;
     font-style: italic;
     font-size: 3rem;
-    list-style-type: symbols('>');
     text-align: center;
     color: #505050;
+}
+
+.delete {
+    color: #ff0000;
+    font-weight: bold;
+    transition: 0.5s;
+    text-align: left;
+
+}
+
+.delete:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    transition: 0.5s;
+    border-radius: 4px;
+    font-weight: normal;
 }
 
 #legend {

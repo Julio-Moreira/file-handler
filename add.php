@@ -9,11 +9,13 @@
 </head>
 <body>
     <main>
-        <h1>Files</h1>
+        <h1>Add files</h1>
         
         <?php
             const DIR = "files";
-            $values = explode('|', str_replace(' ',"", $_GET['names']));
+            $noSpaceValues = str_replace(' ', '', $_GET['names']);
+            $filtredValues = htmlspecialchars($noSpaceValues);
+            $values = explode('|', $filtredValues);
 
             // Add values
             foreach ($values as $file) {
