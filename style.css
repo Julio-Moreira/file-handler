@@ -127,3 +127,8 @@ input[type=submit]:hover {
     border-style: dashed;
     border-color: #a0ff13;
 }
+
+.item {
+    text-decoration: none;
+    color: #000000;    
+}

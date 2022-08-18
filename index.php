@@ -22,16 +22,17 @@
         <fieldset> <legend>List</legend>
         <ol>
             <?php               
-                // List of itens
+                // List of items
                 foreach ($files as $fileName) {
                     $point = strpos($fileName, '.');
                     $item = substr($fileName, 0, $point);
+                    $itemList = "<a href='edit.php?file=$item' class='item'> $item </a>";
                     $delete = " <a class='delete' href='delete.php?file=$item'>
                     <span class='material-symbols-outlined'>
                         delete
                     </span> </a>";
 
-                    echo "<li> $item $delete";
+                    echo "<li> $itemList $delete";
                 }
             ?>
         </ol>
