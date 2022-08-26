@@ -13,6 +13,21 @@
     <main>
         <h1> Editing <?php echo $file ?> </h1>
 
+        <?php
+            $contentNoFormat = file_get_contents("files/$file.txt");
+            $substituted = ['_', '-', '*', '%', '~', '!', '=', '`'];
+            $formatted = ['<em>', '</em>', '<strong>', '</strong>', '<del>', '</del>', '<pre>', '</pre>'];
+            $content = trim(str_replace($substituted, $formatted, $contentNoFormat));
+
+            echo "
+            <form action='save.php' method='post'> 
+                <div contenteditable='true' id='content'> 
+                    $content 
+                </div>
+            <br> 
+                <input type='submit' value='Save'>
+            </form>";
+        ?>
     </main>
 </body>
 </html>

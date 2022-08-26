@@ -107,7 +107,7 @@ input:hover {
     transition: 0.3s;
 }
 
-input[type=submit] {
+input[type=submit], .btn {
     margin-top: 1rem;
     border-radius: 20px;
     background-color: #a0ff13;
@@ -120,7 +120,7 @@ input[type=submit] {
     transition: 0.5s;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, .btn:hover {
     transition: 0.5s;
     background-color: #ffffff;
     color: #a0ff13;

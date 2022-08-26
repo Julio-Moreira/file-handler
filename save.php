@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Delete</title>
+    <title>Save</title>
 </head>
 <body>
     <main>
-        <h1>Delete files</h1>
+        <h1>Save files</h1>
     
         <?php
             const DIR = "files";
-            $file = htmlspecialchars($_GET['file']);
+            $file = htmlspecialchars($_POST['file']);
+            $content = htmlspecialchars($_POST['cont']);
             $pathFile = DIR . "/$file.txt";
-            $deleteFile = `rm $pathFile`;
+            $saveFile = file_put_contents($pathFile, $content) ;
 
-            if (!$deleteFile) {
-                echo "file $file deleted!";
+            if (!$saveFile) {
+                echo "file $file saved!";
             } else {
-                echo "file $file isn't deleted";
+                echo "file $file isn't saved";
                 throw new RuntimeException();
             }
 
-            header('Location: index.php');
+            header("Location: edit.php?file=".$file);
         ?>
     </main> 
 </body>

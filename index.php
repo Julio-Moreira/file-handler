@@ -32,7 +32,7 @@
                         delete
                     </span> </a>";
 
-                    echo "<li> $itemList $delete";
+                    echo "<li> $itemList $delete </li>";
                 }
             ?>
         </ol>

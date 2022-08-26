@@ -14,8 +14,8 @@
         <?php
             const DIR = "files";
             $noSpaceValues = str_replace(' ', '', $_GET['names']);
-            $filtredValues = htmlspecialchars($noSpaceValues);
-            $values = explode('|', $filtredValues);
+            $filteredValues = htmlspecialchars($noSpaceValues);
+            $values = explode('|', $filteredValues);
 
             // Add values
             foreach ($values as $file) {
